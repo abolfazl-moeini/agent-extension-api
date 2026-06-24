@@ -24,8 +24,13 @@ xAI focuses on a powerful API with built-in tool use rather than a traditional p
 2. **MCP Servers**: Build or run an MCP server (stdio/SSE/HTTP) that Grok agents can connect to for new capabilities.
 3. **Integrate into coding agents**: Use xAI models inside Cursor, Claude Code, or your own agent frameworks via compatible APIs or MCP.
 
-Relevant in this collection:
-- `xai/overview.md` (quickstart + tools/function calling)
-- Community MCP examples for Grok.
+## Key Docs in This Collection
 
-For full tool schemas and best practices, refer to the xAI developer docs on function calling and tool use.
+| Guide | Path |
+|-------|------|
+| API overview | `xai/overview.md` |
+| Function calling | `xai/function-calling.md` |
+| MCP integration | `xai/mcp.md` |
+| Shared standards | `standards/mcp.md` |
+
+Grok Build CLI supports MCP for agentic coding workflows.

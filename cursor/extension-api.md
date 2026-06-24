@@ -38,18 +38,27 @@ Cursor's extensibility system is built around **Plugins**, **Agent Skills**, **R
 
 See the detailed plugin creation guide and manifest reference in the Cursor docs collection.
 
-Key files to study:
-- `cursor/plugins/index.md`
-- `cursor/plugins/reference.md`
-- `cursor/skills/index.md`
-- `cursor/mcp/index.md`
+## Key Docs in This Collection
 
-## Relevant Docs in This Collection
+| Guide | Path |
+|-------|------|
+| Plugin creation | `cursor/plugins/creating.md` |
+| Plugin reference | `cursor/plugins/reference.md` |
+| Skills | `cursor/skills/index.md` |
+| MCP | `cursor/mcp/index.md` |
+| Rules | `cursor/rules/index.md` |
+| Hooks | `cursor/hooks/index.md` |
+| Agent behavior | `cursor/agent/index.md` |
+| Starter template | `templates/cursor-plugin.md` |
+| Shared standards | `standards/agent-skills.md`, `standards/mcp.md` |
 
-- `cursor/plugins/` — How to create and distribute plugins.
-- `cursor/skills/` — Authoring reusable agent skills.
-- `cursor/mcp/` — Connecting tools via Model Context Protocol.
-- `cursor/rules/` — Persistent instructions.
-- `cursor/agent/` — How the agent uses these extensions.
+## Testing Locally
 
-This is Cursor's "Extension API" equivalent.
+```bash
+ln -s /path/to/my-plugin ~/.cursor/plugins/local/my-plugin
+# Developer: Reload Window
+```
+
+## Publishing
+
+Submit to [cursor.com/marketplace/publish](https://cursor.com/marketplace/publish). Plugins must be open source.

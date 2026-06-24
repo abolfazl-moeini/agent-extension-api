@@ -1,44 +1,62 @@
-# Plugins | Cursor Docs
+# Cursor Plugins
 
-Source: https://cursor.com/docs/plugins
-
-# Plugins
+Source: [cursor.com/docs/plugins](https://cursor.com/docs/plugins)
 
 Plugins package rules, skills, agents, commands, MCP servers, and hooks into distributable bundles.
 
-Browse official plugins in the [Cursor Marketplace](/marketplace). Community at [cursor.directory](https://cursor.directory).
+## What Plugins Contain
 
-## What plugins contain
+| Component | Description | Location |
+|-----------|-------------|----------|
+| **Rules** | Persistent AI guidance (`.mdc` files) | `rules/` |
+| **Skills** | Agent capabilities (`SKILL.md`) | `skills/` |
+| **Agents** | Custom agent configurations | `agents/` |
+| **Commands** | Agent-executable commands | `commands/` |
+| **MCP Servers** | External tool integrations | `mcp.json` |
+| **Hooks** | Event automation scripts | `hooks/` |
 
-| Component       | Description |
-| --------------- | ----------- |
-| **Rules**       | .mdc files |
-| **Skills**      | SKILL.md packages |
-| **Agents**      | Custom agents |
-| **Commands**    | Command files |
-| **MCP Servers** | Integrations |
-| **Hooks**       | Automation scripts |
+## Quick Start
 
-## Marketplace and Team Marketplaces
+```bash
+# 1. Create plugin directory
+mkdir -p my-plugin/.cursor-plugin
 
-Official plugins are reviewed. Team/Enterprise plans support private marketplaces and required/optional distribution.
+# 2. Add manifest
+cat > my-plugin/.cursor-plugin/plugin.json << 'EOF'
+{
+  "name": "my-plugin",
+  "description": "My development tools",
+  "version": "1.0.0"
+}
+EOF
 
-## Creating plugins
+# 3. Add a skill
+mkdir -p my-plugin/skills/hello
+# Create my-plugin/skills/hello/SKILL.md
 
-Directory with `.cursor-plugin/plugin.json` + components.
+# 4. Test locally
+ln -s $(pwd)/my-plugin ~/.cursor/plugins/local/my-plugin
+# Reload Cursor window
+```
 
-Example structure and manifest in source.
+## Marketplace
 
-Test locally via `~/.cursor/plugins/local/`.
+- **Official**: [cursor.com/marketplace](https://cursor.com/marketplace) — manually reviewed
+- **Community**: [cursor.directory](https://cursor.directory)
+- **Team marketplaces**: Private repos for Teams/Enterprise plans
 
-Submit via marketplace/publish.
+## Documentation in This Collection
 
-## Managing plugins
+| Guide | Description |
+|-------|-------------|
+| [creating.md](creating.md) | Step-by-step plugin creation |
+| [reference.md](reference.md) | Manifest schema and component formats |
+| [../hooks/index.md](../hooks/index.md) | Hook configuration |
+| [../skills/index.md](../skills/index.md) | Skill authoring |
+| [../mcp/index.md](../mcp/index.md) | MCP server setup |
+| [../rules/index.md](../rules/index.md) | Rules format |
+| [../../templates/cursor-plugin.md](../../templates/cursor-plugin.md) | Starter template |
 
-Settings panels for rules, skills, MCP servers.
+## Publishing
 
----
-
-## Sitemap
-
-[Overview of all docs pages](/llms.txt)
+Submit at [cursor.com/marketplace/publish](https://cursor.com/marketplace/publish). Plugins must be open source and pass manual review.

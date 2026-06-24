@@ -45,8 +45,25 @@ Location of components (at plugin root, **not** inside `.claude-plugin/`):
 3. Add MCP, hooks, agents as needed.
 4. Distribute via marketplace or private repo.
 
-Full details in:
-- `claude-code/skills/skills.md`
-- Official plugins and plugins-reference docs (see llms.txt for index).
+## Key Docs in This Collection
 
-This is the equivalent of an "Extension API" for Claude Code.
+| Guide | Path |
+|-------|------|
+| Plugin creation | `claude-code/plugins/index.md` |
+| Plugin reference | `claude-code/plugins/reference.md` |
+| Skills | `claude-code/skills/skills.md` |
+| Hooks | `claude-code/hooks/index.md` |
+| MCP | `claude-code/mcp/index.md` |
+| Subagents | `claude-code/agents/index.md` |
+| Starter template | `templates/claude-code-plugin.md` |
+| Full doc index | `claude-code/llms.txt` |
+
+## CLI Quick Reference
+
+```bash
+claude plugin init my-plugin       # Scaffold
+claude --plugin-dir ./my-plugin    # Test locally
+claude plugin install <name>       # Install from marketplace
+```
+
+Skills in plugins are invoked as `/plugin-name:skill-name`.

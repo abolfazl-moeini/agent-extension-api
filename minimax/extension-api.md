@@ -33,8 +33,12 @@ MiniMax is designed to be "plugged in" to existing AI coding tools (Cursor, Clau
 
 They also offer Token Plans specifically for using their models inside those coding agents.
 
-See:
-- `minimax/overview.md`
-- Detailed tool parameters and client configuration in the MCP guide.
+## Key Docs in This Collection
 
-This is MiniMax's "extension API" for the AI agent ecosystem — focused on multimodal tool exposure via the open MCP standard.
+| Guide | Path |
+|-------|------|
+| Model catalog | `minimax/overview.md` |
+| MCP servers | `minimax/mcp.md` |
+| Shared standards | `standards/mcp.md` |
+
+Run via `uvx minimax-mcp` (Python) or `npx minimax-mcp-js` (JavaScript).

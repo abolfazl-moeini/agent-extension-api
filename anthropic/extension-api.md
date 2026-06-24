@@ -33,11 +33,14 @@ Anthropic provides several mechanisms to extend Claude:
 3. For tools/context: Implement or connect an MCP server.
 4. Use in API calls or in Claude Code / Desktop.
 
-Key resources in this collection:
-- `anthropic/api/getting-started.md`
-- `claude-code/skills/skills.md` (very detailed)
-- `claude-code/extension-api.md` (cross reference)
+## Key Docs in This Collection
 
-See the Skills API reference and Agent Skills guides for full schemas and best practices.
+| Guide | Path |
+|-------|------|
+| Skills API | `anthropic/skills-api/index.md` |
+| API getting started | `anthropic/api/getting-started.md` |
+| Claude Code skills | `claude-code/skills/skills.md` |
+| Claude Code plugins | `claude-code/plugins/index.md` |
+| Shared standards | `standards/agent-skills.md`, `standards/mcp.md` |
 
-This is Anthropic's extension model.
+Skills work in Claude Code (local), Claude API (upload), and claude.ai.

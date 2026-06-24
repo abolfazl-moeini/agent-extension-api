@@ -45,8 +45,10 @@ Reference them from SKILL.md so they load on demand.
 ## Bundled Skills, Plugins, and Distribution
 
 - Bundled skills ship with Claude Code
-- Package skills inside plugins (with .cursor-plugin or equivalent manifest)
+- Package skills inside plugins (`.claude-plugin/plugin.json` manifest)
+- Plugin skills invoked as `/plugin-name:skill-name`
 - Enterprise managed skills via settings
+- See `claude-code/plugins/index.md` for plugin packaging
 
 ## Best Practices & Evals
 

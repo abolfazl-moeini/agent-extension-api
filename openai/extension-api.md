@@ -31,8 +31,14 @@ OpenAI has moved away from the deprecated Assistants API toward modern extensibi
 3. For agents: Use the Agents SDK to orchestrate with tools/MCP.
 4. Package as plugins for Codex surfaces when distributing.
 
-Relevant docs:
-- OpenAI Assistants migration (note deprecation).
-- Current Responses API, Agents SDK, Skills, and MCP guides.
+## Key Docs in This Collection
 
-This is the current OpenAI way to build "extensions" and agent capabilities.
+| Guide | Path |
+|-------|------|
+| Skills | `openai/skills/index.md` |
+| Agents SDK | `openai/agents-sdk/index.md` |
+| MCP | `openai/mcp/index.md` |
+| Assistants migration | `openai/assistants/migration.md` |
+| Shared standards | `standards/agent-skills.md`, `standards/mcp.md` |
+
+**Deprecated**: Assistants API shuts down August 26, 2026. Migrate to Responses API.
